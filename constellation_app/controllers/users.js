@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user.js');
 var authHelpers = require('../helpers/auth.js')
+var Star = require("../models/star");
 
 // router.get('/signup', function(req, res){
 // });
@@ -13,12 +14,20 @@ var authHelpers = require('../helpers/auth.js')
 
 
 router.get('/', function(req, res) {
+  console.log(req.session)
   User.find({})
   .exec(function(err, users){
     if (err) { console.log(err); }
-    res.render('users/index.hbs', { users: users })
+    res.render('users/index.hbs', {
+      users: users,
+      currentUser: req.session.currentUser
+    })
   });
 })
+
+router.get('/signup', function(req, res){
+  res.render('users/signup.hbs')
+});
 
 router.get('/:id', authHelpers.authorize, function(req, res) {
   User.findById(req.params.id)
@@ -29,10 +38,6 @@ router.get('/:id', authHelpers.authorize, function(req, res) {
     res.render('users/show.hbs', { user } );
   });
 })
-
-router.get('/signup', function(req, res){
-  res.render('users/signup.hbs');
-});
 
 router.post('/', authHelpers.createSecure, function(req, res){
   var user = new User({
@@ -46,7 +51,6 @@ router.post('/', authHelpers.createSecure, function(req, res){
     console.log(user);
     res.redirect('/users');
   });
-
 });
 
 module.exports = router;

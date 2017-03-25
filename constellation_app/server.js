@@ -10,11 +10,15 @@ var mongoose = require('mongoose');
 
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
+var constellationController = require('./controllers/constellation.js');
 
 var app = express();
 
 // ADD THE NAME OF YOUR DATABASE
 // mongoose.connect('mongodb://localhost/<YourDatabaseNameHere>');
+
+mongoose.connect('mongodb://localhost/stars_db');
+var db = mongoose.connection;
 
 app.set('view engine', 'hbs')
 
@@ -31,5 +35,11 @@ app.use(session({
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
+app.use('/users/:userId', constellationController);
+
+db.once('open', function() {
+  console.log("database has been connected!");
+});
+
 
 app.listen(4000);

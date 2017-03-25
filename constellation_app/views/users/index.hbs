@@ -1,0 +1,10 @@
+{{#if currentUser}}
+  <h4>welcome {{currentUser.email}}</h4>
+{{/if}}
+
+{{#each users}}
+  <ul>
+    <li>{{this.id}}</li>
+    <li>{{this.email}}</li>
+  </ul>
+{{/each}}
