@@ -36,9 +36,10 @@ router.put('/:id', function updateStar(req, res){
     .exec(function (err, user){
       if (err) { console.log(err); }
       const star = user.star.id(req.params.id);
-      star.name = req.body.name
-      star.img = req.body.img
-      star.description = req.body.description
+      star.name = req.body.name;
+      star.img = req.body.img;
+      star.description = req.body.description;
+      star.bestViewed = req.body.bestViewed;
       user.save();
 
       res.render('star/show', {
