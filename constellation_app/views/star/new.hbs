@@ -1,19 +1,24 @@
-<h1>Edit Constellation</h1>
-<form action="/users/{{user.id}}/star/{{star.id}}?_method=PUT" method="POST">
+<h1>New Constellation</h1>
+<form action="/users" method="POST">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input type="text" name="name"/>
+  </div>
   <div>
     <label for="description">
       Description
     </label>
-    <input type="text" name="name" value="{{star.name}}"/>
+    <input type="text" name="Description"/>
   </div>
   <div>
-    <label for="name">
-      name
+  <div>
+    <label for="image">
+      image
     </label>
-    <span>YES<input type="radio" name="in_progress" value="true" checked /></span>
-    <span>NO<input type="radio" name="in_progress" value="false"/></span>
+    <input type="text" name="image"/>
   </div>
-  <div>
-    <input type="submit" value="Update Constellation"/>
+    <button><a href="/users">Constellation</a></button>
   </div>
 </form>
