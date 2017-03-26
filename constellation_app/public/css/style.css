@@ -1,4 +1,5 @@
 /* ==============================================================================================
+Back Code Source
 Nick Mkrtchyan
 http://www.facebook.com/sonick.pk
 http://www.Mkrtchyan.zz.mu
@@ -103,6 +104,19 @@ header a, a:visited {
   -o-animation:move-clouds-back 200s linear infinite;
   -webkit-animation:move-clouds-back 200s linear infinite;
   animation:move-clouds-back 200s linear infinite;
+}
+h1, nav{
+  color: white;
+  z-index: 1000;
+  position: absolute;
+}
+  h1 {
+  margin-left: 45%;
+  margin-top: 45px;
+}
+nav{
+
+  margin-left: 47%;
 }
 
 
