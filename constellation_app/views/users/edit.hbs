@@ -1,6 +1,6 @@
 <h1>Edit {{this.name}} account info</h1>
 
-<div class="row">
+<div class="editrow">
     <form action="/users/{{user.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">
         <div class="form-group">
             <label for="first_name"> Name:</label>
@@ -17,7 +17,7 @@
     </form>
 </div>
 
-<div>
+<div class="links">
     <a href="/users/{{users.id}}" class="btn btn-default">Back</a>
     <a href="/users" class="btn btn-default">Main Page</a>
 </div>

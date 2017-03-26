@@ -1,8 +1,6 @@
 /* ==============================================================================================
-Back Code Source
-Nick Mkrtchyan
-http://www.facebook.com/sonick.pk
-http://www.Mkrtchyan.zz.mu
+Back ground Code Source
+https://www.script-tutorials.com/night-sky-with-twinkling-stars/
 ================================================================================================= */
 
 * {
@@ -105,7 +103,7 @@ header a, a:visited {
   -webkit-animation:move-clouds-back 200s linear infinite;
   animation:move-clouds-back 200s linear infinite;
 }
-h1, nav{
+h1, nav, .usersIndex , .editrow, .link , .newstar, .signup{
   color: white;
   z-index: 1000;
   position: absolute;
@@ -114,9 +112,22 @@ h1, nav{
   margin-left: 45%;
   margin-top: 45px;
 }
-nav{
+nav, .newstar, .signup{
 
   margin-left: 47%;
 }
 
+.newstar , .signup{
+margin-top: 10%;
+font-size: 26px;
+}
+#newbutton{
+  background-color: black;
+/*  display: flex;
+  justify-content: center;
+  align-items: center;*/
+  margin-left: 20px;
+  height: 40px;
+  width: 130px;
+}
 
