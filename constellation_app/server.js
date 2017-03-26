@@ -5,13 +5,13 @@ var methodOverride = require('method-override');
 var logger = require('morgan');
 var hbs = require('hbs')
 var mongoose = require('mongoose');
-var db = require('./db');
+// var db = require('./db');
 
 
 
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
-var constellationController = require('./controllers/constellation.js');
+var starController = require('./controllers/star.js');
 
 var app = express();
 
@@ -23,6 +23,7 @@ var db = mongoose.connection;
 
 app.set('view engine', 'hbs')
 
+app.use(express.static(__dirname + '/public/css'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
@@ -36,7 +37,7 @@ app.use(session({
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
-app.use('/users/:userId', constellationController);
+app.use('/users/:userId', starController);
 
 db.once('open', function() {
   console.log("database has been connected!");

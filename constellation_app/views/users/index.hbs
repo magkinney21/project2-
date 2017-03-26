@@ -1,4 +1,4 @@
-{{#if currentUser}}
+<!-- {{#if currentUser}}
   <h4>welcome {{currentUser.email}}</h4>
 {{/if}}
 
@@ -9,3 +9,19 @@
     <li>{{this.email}}</li>
   </ul>
 {{/each}}
+ -->
+<h1>Constellations</h1>
+
+<ol>
+    {{#each star}}
+    <li>
+        <h1><a href="/users">{{name}}</a></h1>
+   <!--      <h3>{{this.country}}</h3> -->
+        <p>{{description}}, {{best_viewed}}</p>
+    </li>
+    {{/each}}
+</ol>
+<a href="/users/{{users.id}}edit" class="btn btn-default">User Profile</a>
+<br>
+<a href="/users/star/new" class="btn btn-default">Create a New Star</a>
+

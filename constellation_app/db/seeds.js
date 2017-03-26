@@ -2,7 +2,10 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stars_db');
 var Star = require("../models/star");
 mongoose.promise = global.Promise;
+var User = require('../models/user');
+var Star = require('../models/star');
 
+// Use native promises
 Star.remove({}, function(err) {
     console.log(err);
 });
@@ -37,7 +40,7 @@ var canisMajor= new Star({
 
 
 
-Aquarius.save(function(err) {
+aquarius.save(function(err) {
   if (err) console.log(err);
 
   console.log('Aquarius created!');
