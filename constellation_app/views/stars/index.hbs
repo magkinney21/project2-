@@ -1,0 +1,10 @@
+<h2>{{user.name}}'s Constellation!</h2>
+
+<ul>
+  {{#each user.star}}
+    <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.description}}</a></li>
+    <br/>
+    <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.name}}</a></li>
+  {{/each}}
+  <a href="/users/{{user.id}}/star/new">New Constellation</a>
+</ul>

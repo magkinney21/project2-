@@ -40,9 +40,9 @@ router.get('/signup', function(req, res){
 //Show only if Current User session
 router.get('/:id', authHelpers.authorize, function(req, res) {
   User.findById(req.params.id)
-  .exec(function(err, user) {
+  .exec(function(err, user, stars) {
     if (err) console.log(err);
-    res.render('users/show', { user:user } );
+    res.render('users/show', { user:user , stars: stars} );
   });
 })
 // edit user profile

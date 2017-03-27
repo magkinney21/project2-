@@ -1,0 +1,17 @@
+<h1>Edit Constellation</h1>
+<form action="/users/{{user.id}}/stars/{{star.id}}?_method=PUT" method="POST">
+  <div>
+    <label for="description">
+      Description
+    </label>
+    <input type="text" name="name" value="{{star.name}}"/>
+  </div>
+  <div>
+    <label for="name">
+      name
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Update Constellation"/>
+  </div>
+</form>

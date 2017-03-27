@@ -6,13 +6,14 @@ var methodOverride = require('method-override');
 var logger = require('morgan');
 var hbs = require('hbs')
 var mongoose = require('mongoose');
+var $ = require('jquery');
 // var db = require('./db');
 
 
 
 var usersController = require('./controllers/users.js');
 var sessionsController = require('./controllers/sessions.js');
-var starController = require('./controllers/star.js');
+var starsController = require('./controllers/stars.js');
 
 var app = express();
 
@@ -39,7 +40,7 @@ app.use(session({
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
-app.use('/users/:userId', starController);
+app.use('/users/:userId', starsController);
 
 db.once('open', function() {
   console.log("database has been connected!");
