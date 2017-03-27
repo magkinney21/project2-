@@ -23,7 +23,7 @@ StarSchema.pre('save', function(next) {
 });
 
 var UserSchema = new Schema({
-  name:String,
+  name: String,
   // username:String,
   email: String,
   password_digest: String,

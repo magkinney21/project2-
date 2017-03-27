@@ -9,6 +9,8 @@ router.get('/', function indexStar(req, res){
   User.findById(req.params.userId)
     .exec(function(err, user){
       if (err) { console.log(err); }
+      // res.send('add a new star');
+      console.log(user)
       res.render('stars/index.hbs', {
         user: user
       });
@@ -129,7 +131,7 @@ router.get('/:id', function showStar(req, res) {
       if (err) { console.log(err); }
       const star = user.star.id(req.params.id);
       res.render('stars/show', {
-      star: star,
+        star: star,
         user: user
       });
     });

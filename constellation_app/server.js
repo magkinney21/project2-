@@ -40,7 +40,7 @@ app.use(session({
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);
-app.use('/users/:userId', starsController);
+app.use('/users/:userId/stars', starsController);
 
 db.once('open', function() {
   console.log("database has been connected!");

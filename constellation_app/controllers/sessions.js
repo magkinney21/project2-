@@ -8,7 +8,7 @@ router.get('/login', function(req, res) {
 })
 
 router.post('/login', authHelpers.loginUser, function(req, res){
-  res.redirect(`/users/${req.session.currentUser._id}`)
+  res.redirect(`/users/${req.session.currentUser._id}/stars`)
 });
 
 router.delete('/', function(req, res){

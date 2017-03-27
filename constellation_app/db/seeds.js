@@ -22,7 +22,7 @@ Star.remove({}, function(err) {
 
 var aquarius = new Star({
     name: 'Aquarius',
-    img:'http://content.artofmanliness.com/uploads/2014/07/Sidney_Hall_-_Uranias_Mirror_-_Aquarius_Piscis_Australis__Ballon_Aerostatique.jpg',
+    img:'http://www.crystalinks.com/aquariusrb.jpg',
     description: 'Latin for water carrier or cup carrier',
     best_viewed: 'October'
 });
@@ -36,14 +36,14 @@ var aquila = new Star({
 
 var aries = new Star({
     name: 'Aries',
-    img:'https://media.giphy.com/media/lfpwr7E2wotFu/giphy.gif',
+    img:'http://content.artofmanliness.com/uploads/2014/07/oldaries.jpgf',
     description: 'Latin for ram ',
     best_viewed: 'December'
 });
 
 var canisMajor = new Star({
     name: 'Canis Major',
-    img:'https://upload.wikimedia.org/wikipedia/commons/5/56/Canis_Major_%26_Minor_%26_Lepus.gif',
+    img:'http://content.artofmanliness.com/uploads/2014/07/oldcanis.jpg',
     description: 'Latin for greater dog ',
     best_viewed: 'February'
 });
@@ -69,7 +69,7 @@ var gemini = new Star({
 });
 var leo = new Star({
     name: 'Leo',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldleo.jpg',
+    img:'http://www.crystalinks.com/leorb.jpg',
     description: 'Latin for lion',
     best_viewed: 'April'
 });

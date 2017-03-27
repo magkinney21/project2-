@@ -1,10 +1,14 @@
-<h2>{{user.name}}'s Constellation!</h2>
+<h2>{{user.email}}'s Constellation!</h2>
 
+{{#if user.star}}
 <ul>
   {{#each user.star}}
     <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.description}}</a></li>
     <br/>
     <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.name}}</a></li>
   {{/each}}
-  <a href="/users/{{user.id}}/star/new">New Constellation</a>
 </ul>
+{{else}}
+  <h1>Make a new star!</h1>
+{{/if}}
+<a href="/users/{{user.id}}/stars/new">New Constellation</a>
