@@ -22,14 +22,14 @@ User.remove({}, function(err) {
 
 var aquarius = new Star({
     name: 'Aquarius',
-    img:'https://upload.wikimedia.org/wikipedia/commons/b/bf/Aquarius.gif',
+    img:'http://content.artofmanliness.com/uploads/2014/07/Sidney_Hall_-_Uranias_Mirror_-_Aquarius_Piscis_Australis__Ballon_Aerostatique.jpg',
     description: 'Latin for water carrier or cup carrier',
     best_viewed: 'October'
 });
 
 var aquila = new Star({
     name: 'Aquila',
-    img:'https://upload.wikimedia.org/wikipedia/commons/9/9d/Aquila.gif',
+    img:'http://content.artofmanliness.com/uploads/2014/07/oldaquila.jpg',
     description: 'Latin for eagle ',
     best_viewed: 'late summer, September'
 });
