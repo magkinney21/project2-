@@ -103,16 +103,16 @@ header a, a:visited {
   -webkit-animation:move-clouds-back 200s linear infinite;
   animation:move-clouds-back 200s linear infinite;
 }
-h1, .container-fluid, .usersIndex , .editrow, .link , .newstar, .signup{
+h1, nav, .container-fluid, .usersIndex , .editrow, .link , .newstar, .signup{
   color: white;
   z-index: 1000;
   position: absolute;
 }
-  h1 {
+  h1{
   margin-left: 45%;
   margin-top: 45px;
 }
-/*nav, */.newstar, .signup, .usersIndex{
+nav, .newstar, .signup, .usersIndex{
 
   margin-left: 47%;
 }
