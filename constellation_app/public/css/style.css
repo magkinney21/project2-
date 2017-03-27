@@ -103,7 +103,7 @@ header a, a:visited {
   -webkit-animation:move-clouds-back 200s linear infinite;
   animation:move-clouds-back 200s linear infinite;
 }
-h1, nav, .usersIndex , .editrow, .link , .newstar, .signup{
+h1, .container-fluid, .usersIndex , .editrow, .link , .newstar, .signup{
   color: white;
   z-index: 1000;
   position: absolute;
@@ -112,12 +112,16 @@ h1, nav, .usersIndex , .editrow, .link , .newstar, .signup{
   margin-left: 45%;
   margin-top: 45px;
 }
-nav, .newstar, .signup{
+/*nav, */.newstar, .signup, .usersIndex{
 
   margin-left: 47%;
 }
-
-.newstar , .signup{
+.usersIndex{
+margin-top: 30%;
+font-size: 20px;
+text-align: center;
+}
+.newstar , .signup {
 margin-top: 10%;
 font-size: 26px;
 }
