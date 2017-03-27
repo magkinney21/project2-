@@ -1,4 +1,5 @@
 var express = require('express');
+var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
@@ -24,6 +25,7 @@ var db = mongoose.connection;
 app.set('view engine', 'hbs')
 
 app.use(express.static(__dirname + '/public/css'));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));

@@ -1,14 +1,24 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stars_db');
-var Star = require("../models/star");
 mongoose.promise = global.Promise;
+
 var User = require('../models/user');
 var Star = require('../models/star');
 
-// Use native promises
 Star.remove({}, function(err) {
     console.log(err);
 });
+
+User.remove({}, function(err) {
+    console.log(err);
+});
+
+// make new user maggie with all the right fields
+// var maggie = new User
+
+// save user maggie
+// maggie.save(function(err) {
+//   if (err) console.log(err);
 
 var aquarius = new Star({
     name: 'Aquarius',
@@ -31,7 +41,7 @@ var aries = new Star({
     best_viewed: 'December'
 });
 
-var canisMajor= new Star({
+var canisMajor = new Star({
     name: 'Canis Major',
     img:'https://upload.wikimedia.org/wikipedia/commons/5/56/Canis_Major_%26_Minor_%26_Lepus.gif',
     description: 'Latin for greater dog ',
@@ -63,3 +73,10 @@ canisMajor.save(function(err) {
 
   console.log('Canis Major created!');
 });
+
+// push all stars into maggie.star
+// users.star.forEach(function(user, i){
+//   maggie.star.push(star[i]);
+
+
+

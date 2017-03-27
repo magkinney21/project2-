@@ -14,14 +14,19 @@
 
 <div class="usersIndex">
 <ol>
-    {{#each star}}
-    <li>
-        <h1>{{Users.Star.name}}</h1>
-        <p>{{users.star.description}}, {{user.star.best_viewed}}</p>
-    </li>
+    {{#each stars}}
+  <div class="thisStar">
+    <li>{{this.name}}</li>
+<!--     <li id = "aquarius"><img src="{{this.img}}"></li> -->
+<!--     <li><h1><a href="/users/{{this.id}}"></h1></a><li> -->
+    <br>
+    <li>{{this.description}}</li>
+    <br>
+    <li>{{this.best_viewed}}</li>
+</div>
     {{/each}}
 </ol>
-<a href="/users/{{users.id}}edit" class="btn btn-default">User Profile</a>
+<a href="/users/{{user._id}}edit" class="btn btn-default">User Profile</a>
 <br>
 <a href="/users/star/new" class="btn btn-default">Create a New Star</a>
 </div>
