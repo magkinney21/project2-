@@ -41,36 +41,34 @@ router.post('/', function createStar(req, res){
 
 // EDIT
 
-router.get('/:id/edit', function editStar(req, res) {
+router.get('/:starId/edit', function editStar(req, res) {
   User.findById(req.params.userId)
     .exec(function (err, user){
       if (err) { console.log(err); }
-      const star = user.star.id(req.params.id);
 
-
+      var editStar = user.star.find(function (star) { return star.id === req.params.starId })
       res.render('stars/edit', {
-        star: star,
-        user: user
-      });
-    });
+          star: editStar ,
+          user: user
+      })
+    })
 });
 
 // UPDATE
-router.put('/:id', function updateStar(req, res){
-    Star.findByIdAndUpdate(req.params.id)
-    .exec(function (err, star){
+router.put('/:starId', function updateStar(req, res){
+    User.findById(req.params.userId)
+    .exec(function (err, user){
       if (err) { console.log(err); }
-      // const star = user.star.id(req.params.id);
+      const star = user.star.id(req.params.starId);
       star.name = req.body.name;
       star.img = req.body.img;
       star.description = req.body.description;
       star.bestViewed = req.body.bestViewed;
-      star.save();
+      user.save();
 
-      res.render(`/users/${req.params.userId}/stars`, {
+      res.redirect(`/users/${req.params.userId}/stars`);
       });
     });
-});
 // update
 // router.patch('/:id', function(req, res) {
 //     Star.findByIdAndUpdate(req.params.id, {
@@ -106,7 +104,7 @@ router.get('/new', function newStar(req, res){
 
 // DELETE
 
-router.delete('/:id', function deleteStar(req, res) {
+router.delete('/:starId', function deleteStar(req, res) {
   Star.findByIdAndRemove(req.params.id)
     .exec(function (err, star){
       if (err) { console.log(err); }
@@ -115,31 +113,28 @@ router.delete('/:id', function deleteStar(req, res) {
       });
 User.findByIdAndUpdate(req.params.userId, {
   $pull: {
-    star: {_id: req.params.id}
+    star: {_id: req.params.starId}
   }
 })
 .exec(function(err, user){
   if(err) {console.log(err);}
-        res.render('/stars', {
-        user: user
-    });
+        res.redirect(`/users/${req.params.userId}/stars`)
   })
 });
 
 
 // SHOW
 
-router.get('/:id', function showStar(req, res) {
-  console.log(req.params.id)
-  Star.findById(req.params.id)
-    .exec(function (err, star){
-      if (err) { console.log(err); }
-      console.log(star)
+router.get('/:starId', function showStar(req, res) {
+  User.findById(req.params.userId)
+    .exec(function (err, user) {
+      if (err) { return console.log(err) }
+
+      var foundStar = user.star.find(function (star) { return star.id === req.params.starId })
       res.render('stars/show', {
-        star: star
-        // user: user
-      });
-    });
+          star: foundStar
+      })
+    })
 });
 
 module.exports = router;
