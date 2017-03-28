@@ -8,19 +8,21 @@ var Star = require("../models/star");
 router.get('/', function indexStar(req, res){
   User.findById(req.params.userId)
   // Star.find({})
-    .exec(function(err, user, star){
+    .exec(function(err, user){
       if (err) { console.log(err); }
       // res.send('add a new star');
       console.log(user)
       res.render('stars/index.hbs', {
-        user: user ,
-        star: star
+        user: user,
+        user_email: user.email,
+        stars: user.star
       });
     });
 });
 // CREATE
 
 router.post('/', function createStar(req, res){
+  console.log("hello")
   User.findById(req.params.userId)
     .exec(function (err, user){
       if (err) { console.log(err); }
@@ -29,7 +31,6 @@ router.post('/', function createStar(req, res){
       img :req.body.img,
       description:req.body.description
       });
-      newStar.save();
       user.star.push(newStar);
 
       user.save();
@@ -106,33 +107,36 @@ router.get('/new', function newStar(req, res){
 // DELETE
 
 router.delete('/:id', function deleteStar(req, res) {
-  User.findById(req.params.userId)
-    .exec(function (err, user){
+  Star.findByIdAndRemove(req.params.id)
+    .exec(function (err, star){
       if (err) { console.log(err); }
 
-      user.star.id(req.params.id).remove();
-
-      user.save(function (err) {
-        if (err) console.log(err);
-        console.log('Star was removed')
+        console.log('Constellation was removed')
       });
-
-      res.render('stars/index', {
+User.findByIdAndUpdate(req.params.userId, {
+  $pull: {
+    star: {_id: req.params.id}
+  }
+})
+.exec(function(err, user){
+  if(err) {console.log(err);}
+        res.render('/stars', {
         user: user
-      });
     });
+  })
 });
 
 
 // SHOW
 
 router.get('/:id', function showStar(req, res) {
-  Star.findById(req.params.userId)
+  console.log(req.params.id)
+  Star.findById(req.params.id)
     .exec(function (err, star){
       if (err) { console.log(err); }
-      // const star = user.star.id(req.params.id);
+      console.log(star)
       res.render('stars/show', {
-        star: star,
+        star: star
         // user: user
       });
     });

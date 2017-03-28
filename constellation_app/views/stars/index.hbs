@@ -3,11 +3,11 @@
 <div class="starindex">
 <!-- {{#if user.star}} -->
 <ul>
-  {{#each user}}
-    <li>{{this.star}}</li>
-    <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.description}}</a></li>
+  {{#each stars}}
+    <li>{{this.name}}</li>
+    <li><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.description}}</a></li>
     <br/>
-    <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.name}}</a></li>
+    <li><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.name}}</a></li>
   {{/each}}
 </ul>
 {{else}}
