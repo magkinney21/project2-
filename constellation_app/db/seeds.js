@@ -9,17 +9,6 @@ Star.remove({}, function(err) {
     console.log(err);
 });
 
-// User.remove({}, function(err) {
-//     console.log(err);
-// });
-
-// make new user maggie with all the right fields
-// var maggie = new User
-
-// save user maggie
-// maggie.save(function(err) {
-//   if (err) console.log(err);
-
 var aquarius = new Star({
     name: 'Aquarius',
     img:'http://www.crystalinks.com/aquariusrb.jpg',

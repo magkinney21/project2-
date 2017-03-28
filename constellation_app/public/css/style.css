@@ -142,16 +142,17 @@ ol {
   list-style:none;
   }
 .thisStar{
-  display: flex;
+/*  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;*/
+  display: inline-block;
 }
 #starname{
   font-size: 15px;
   font-family: cursive;
 }
 
-img{
-  height: 140px;
-  width: 240px;
+img {
+  height: 60px;
+  width: 140px;
 }

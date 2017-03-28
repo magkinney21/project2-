@@ -69,25 +69,6 @@ router.put('/:starId', function updateStar(req, res){
       res.redirect(`/users/${req.params.userId}/stars`);
       });
     });
-// update
-// router.patch('/:id', function(req, res) {
-//     Star.findByIdAndUpdate(req.params.id, {
-//       name:req.body.name,
-//       img:req.body.img
-//       description:req.body.description
-//       bestViewed:req.body.bestViewed
-//     }, { new: true })
-//         .exec(function(err, star) {
-//             if (err) { console.log(err); }
-
-//             console.log(star);
-//             // res.send(author);
-//             res.render('star/show', {
-//                 author: author
-//             });
-//         });
-// });
-
 // NEW
 
 router.get('/new', function newStar(req, res){
