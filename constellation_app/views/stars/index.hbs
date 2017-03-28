@@ -2,34 +2,34 @@
 
 <div class="starindex">
 
-<ul>
+  <table style="width: 100%">
   {{#each stars}}
-    <li>{{this.name}}</li>
-    <li><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.description}}</a></li>
-    <br/>
-    <li>
-      <a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.name}}</a>
-      <a href="/users/{{../user.id}}/stars/{{this.id}}/edit">(edit)</a>
-
-      <div>
+    <tr>
+      <th><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.name}}</a></th>
+      <th>{{this.description}}</th>
+      <th>{{#if this.image}} <img src="{{this.image}}" alt = "{{this.name}}"/> {{/if}}<th>
+      <th>{{this.best_viewed}}</th>
+     </tr>
+    </table>
+      <a href="/users/{{../user.id}}/stars/{{this.id}}/edit">{{this.name}}</a>
+    <div>
         <form method="POST" action="/users/{{../user.id}}/stars/{{this.id}}?_method=DELETE">
           <button type="submit" value="DELETE" class="btn btn-danger" />Delete</button>
         </form>
-      </div>
+    </div>
     </li>
+    <br/>
+
   {{/each}}
 </ul>
-        <a href="/users/{{user.id}}/stars/show">Your Constellation</a>
         <br>
         <a href="/users/{{user.id}}/stars/new">New Constellation</a>
-        <br>
-        <a href="/users/{{user.id}}/stars/edit">Edit/Update Constellation</a>
         <br>
         <a href="/users/{{user.id}}/edit">Edit Account</a>
         <br>
         <a href="/users">Main Page</a>
 <div>
-    <form method="post" action="/star?_method=DELETE">
-    </form>
+    <!-- <form method="post" action="/star?_method=DELETE">
+    </form> -->
 </div>
 </div>

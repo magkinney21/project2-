@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 
 var StarSchema = new Schema({
   name: String,
-  img: String,
+  image: String,
   best_viewed:String,
   description: String,
   created_at: Date,

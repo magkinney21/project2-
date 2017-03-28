@@ -28,8 +28,9 @@ router.post('/', function createStar(req, res){
       if (err) { console.log(err); }
      const newStar = new Star ({
       name: req.body.name,
-      img :req.body.img,
-      description:req.body.description
+      image :req.body.image,
+      description:req.body.description,
+      best_viewed:req.body.best_viewed
       });
       user.star.push(newStar);
 
@@ -61,12 +62,16 @@ router.put('/:starId', function updateStar(req, res){
       if (err) { console.log(err); }
       const star = user.star.id(req.params.starId);
       star.name = req.body.name;
-      star.img = req.body.img;
+      star.image = req.body.image;
       star.description = req.body.description;
-      star.bestViewed = req.body.bestViewed;
+      star.best_viewed = req.body.best_viewed;
       user.save();
 
-      res.redirect(`/users/${req.params.userId}/stars`);
+      res.render('stars/show', {
+        star: star,
+        user: user
+      })
+      // res.redirect(`/users/${req.params.userId}/stars`);
       });
     });
 // NEW
@@ -105,17 +110,32 @@ User.findByIdAndUpdate(req.params.userId, {
 
 
 // SHOW
-
 router.get('/:starId', function showStar(req, res) {
   User.findById(req.params.userId)
     .exec(function (err, user) {
       if (err) { return console.log(err) }
 
-      var foundStar = user.star.find(function (star) { return star.id === req.params.starId })
+        var foundStar = user.star.id(req.params.starId);
+      // var foundStar = user.star.find(function (star) { return star.id === req.params.starId })
+      console.log(foundStar)
       res.render('stars/show', {
-          star: foundStar
+          star: foundStar,
+          user: user
       })
     })
 });
+
+// router.get('/:starId', function showStar(req, res) {
+//   User.findById(req.params.userId)
+//     .exec(function (err, user) {
+//       if (err) { return console.log(err) }
+
+//       var foundStar = user.star.find(function (star) { return star.id === req.params.starId })
+//       console.log(foundStar)
+//       res.render('stars/show', {
+//           star: foundStar
+//       })
+//     })
+// });
 
 module.exports = router;

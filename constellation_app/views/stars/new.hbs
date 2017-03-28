@@ -1,6 +1,6 @@
 <h1>New Constellation</h1>
 <div class="newstar">
-<form action="/users/{{user._id}}/stars" method="POST">
+<form action="/users/{{user.id}}/stars" method="POST">
   <div>
     <label for="name">
       Name
@@ -11,7 +11,7 @@
     <label for="description">
       Description
     </label>
-    <input type="text" name="Description"/>
+    <input type="text" name="description"/>
   </div>
   <div>
   <div>
@@ -21,7 +21,7 @@
     <input type="text" name="image"/>
   </div>
   <div>
-    <label for="image">
+    <label for="best_viewed">
       Best Viewed
     </label>
     <input type="text" name="best_viewed"/>
