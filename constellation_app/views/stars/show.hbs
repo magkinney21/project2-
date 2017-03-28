@@ -4,10 +4,10 @@
 <h2>Name: {{star.name}}</h2>
 
 
-<form action="/users/{{user.id}}/star/{{star.id}}?_method=DELETE" method="POST">
+<!-- <form action="/users/{{user.id}}/star/{{star.id}}?_method=DELETE" method="POST">
   <input type="submit" value="Delete star"/>
 </form>
-<a href="/users/{{user.id}}/star/{{star.id}}stars/edit">Edit Constellation</a>
+ -->
 <ol>
     {{#each stars}}
   <div class="thisStar">
@@ -16,5 +16,4 @@
 </div>
     {{/each}}
 </ol>
-  <a href="users/{[user:id}}show" class="btn btn-default">Profile</a>
 </div>
