@@ -45,5 +45,5 @@ var StarModel = mongoose.model('Star',StarSchema);
 
 module.exports = {
   User: UserModel,
-  Star:StarModel
+  Star: StarModel
 }

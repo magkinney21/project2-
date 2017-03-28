@@ -1,8 +1,10 @@
-<h2>{{user.email}}'s Constellation!</h2>
+<h1>{{user.email}}'s Profile</h1>
 
-{{#if user.star}}
+<div class="starindex">
+<!-- {{#if user.star}} -->
 <ul>
-  {{#each user.star}}
+  {{#each user}}
+    <li>{{this.star}}</li>
     <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.description}}</a></li>
     <br/>
     <li><a href="/users/{{../user.id}}/star/{{this.id}}">{{this.name}}</a></li>
@@ -10,5 +12,29 @@
 </ul>
 {{else}}
   <h1>Make a new star!</h1>
-{{/if}}
+<!-- {{/if}} -->
+<a href="/users/{{user.id}}/stars/show">Your Constellation</a>
+<br>
 <a href="/users/{{user.id}}/stars/new">New Constellation</a>
+<br>
+<a href="/users/{{user.id}}/stars/edit">Edit/Update Constellation</a>
+<br>
+<a href="/users/{{user.id}}/edit">Edit Constellation</a>
+<br>
+<a href="/users">Main Page</a>
+<br>
+<a href="/user/show">User Account Info</a>
+<div>
+    <form method="post" action="/star?_method=DELETE">
+    </form>
+</div>
+</div>
+<!-- <h2>{{user.email}}'s stars!</h2>
+
+<ul>
+  {{#each user.stars}}
+    <li><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.description}}</a></li>
+    <br/>
+  {{/each}}
+  <a href="/users/{{user.id}}/stars/new">New star</a>
+</ul>

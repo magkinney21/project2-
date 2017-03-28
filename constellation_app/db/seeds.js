@@ -29,41 +29,41 @@ var aquarius = new Star({
 
 var aquila = new Star({
     name: 'Aquila',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldaquila.jpg',
+    img:'http://www.universetoday.com/wp-content/uploads/2008/10/Aquila-Mythological.jpg',
     description: 'Latin for eagle ',
     best_viewed: 'late summer, September'
 });
 
 var aries = new Star({
     name: 'Aries',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldaries.jpgf',
+    img:'https://s-media-cache-ak0.pinimg.com/originals/53/f5/54/53f554fd7fbbb2b6fffe252b20e019b2.jpg',
     description: 'Latin for ram ',
     best_viewed: 'December'
 });
 
 var canisMajor = new Star({
     name: 'Canis Major',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldcanis.jpg',
+    img:'http://sirius-star.ro/wp-content/uploads/2015/12/Sirius-Dog-2.jpg',
     description: 'Latin for greater dog ',
     best_viewed: 'February'
 });
 
 var cassiopeia = new Star({
     name: 'Cassiopeia',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldcassio.jpg',
+    img:'http://utahsadventurefamily.com/wp-content/uploads/2012/06/cassiopeameg.jpg',
     description: 'No Latin meaning, it’s the name of a queen in Greek mythology',
     best_viewed: 'November'
 });
 
 var cygnus = new Star({
     name: 'Cygnus',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldcygnus.jpg',
+    img:'http://www.redorbit.com/media/uploads/2004/10/10_c868689f8d4d16b3abd0be1cb57f7fa22.jpg',
     description: 'Latinized Greek for swan',
     best_viewed: 'September'
 });
 var gemini = new Star({
     name: 'Gemini',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldgemini.jpg',
+    img:'http://www.crystalinks.com/geminirb.jpg',
     description: 'Latin for twins',
     best_viewed: 'February'
 });
@@ -75,43 +75,43 @@ var leo = new Star({
 });
 var lyra = new Star({
     name: 'Lyra',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldcygnus.jpg',
+    img:'http://scistand.com/wp-content/uploads/sites/3/2013/08/Lyra.png',
     description: 'Latin for lyre',
     best_viewed: 'August'
 });
 var orion = new Star({
     name: 'Orion',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldorion.jpg',
+    img:'https://bobmoler.files.wordpress.com/2015/01/orion-straddles-the-equator.png',
     description: 'Named for Orion, the mythological Greek hunter',
     best_viewed: 'January'
 });
 var pisces = new Star({
     name: 'Pisces',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldpisces.jpg',
+    img:'http://www.crystalinks.com/piscesrb.jpg',
     description: 'Latin for fish',
     best_viewed: 'November'
 });
 var scorpius = new Star({
     name: 'Scorpius',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldscorpio.jpg',
+    img:'http://www.clarkfoundation.org/astro-utah/vondel/images/ScorpArt.gif',
     description: 'Latin for scorpion',
     best_viewed: 'July'
 });
 var taurus = new Star({
     name: 'Taurus',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldtaurus.jpg',
+    img:'http://www.birthnumbers.net/wp-content/uploads/2010/05/Taurus.jpg',
     description: 'Latin for bull',
     best_viewed: 'January'
 });
 var ursaMajor = new Star({
     name: 'Ursa Major',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldursamajor.jpg',
+    img:'https://s-media-cache-ak0.pinimg.com/originals/96/54/12/965412fe2671937bfa3e8e495f3d0b83.jpg',
     description: 'Latin for large bear',
     best_viewed: 'April'
 });
 var ursaMinor = new Star({
     name: 'Ursa Minor',
-    img:'http://content.artofmanliness.com/uploads/2014/07/oldursaminor.jpg',
+    img:'https://s3-us-west-2.amazonaws.com/cdn.cosmeticsanctuary.com/wp-content/uploads/2015/08/0f107360a00e92476faa6c2c12088e25.jpg',
     description: 'Latin for smaller bear',
     best_viewed: 'June'
 });
