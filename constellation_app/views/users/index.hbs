@@ -1,15 +1,4 @@
-<!-- {{#if currentUser}}
-  <h4>welcome {{currentUser.email}}</h4>
-{{/if}}
 
-{{#each users}}
-  <ul>
-    <li>
-    <li>{{this.id}}</li>
-    <li>{{this.email}}</li>
-  </ul>
-{{/each}}
- -->
 <h1>Constellations</h1>
 
 <div class="usersIndex">
@@ -17,9 +6,8 @@
     {{#each stars}}
   <div class="thisStar">
     <li id="starname">{{this.name}}</li>
-    <li><img src="{{this.image}}"></li>
+   <span id = "image" <li><img src="{{this.image}}"></li> </span>
 </div>
     {{/each}}
 </ol>
-  <a href="users/{[user:id}}show" class="btn btn-default">Profile</a>
 </div>

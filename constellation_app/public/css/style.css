@@ -107,7 +107,7 @@ header a, a:visited {
 h1, nav, .container-fluid, .usersIndex , .editrow, .link , .newstar, .signup ,.show , .starindex{
   color: white;
   z-index: 1000;
-  position: absolute;
+  position: relative;
 }
   h1{
   margin-left: 44%;
@@ -142,17 +142,27 @@ ol {
   list-style:none;
   }
 .thisStar{
-/*  display: flex;
+   display: flex;
   flex-direction: row;
-  justify-content: flex-start;*/
+  justify-content: space-around;
   display: inline-block;
+
 }
 #starname{
-  font-size: 15px;
+  font-size: 20px;
   font-family: cursive;
+  position: relative;
+  right: 155%;
+  margin-top:-160px;
+  margin-bottom:-5px;
 }
 
 img {
   height: 60px;
   width: 140px;
+  position: relative;
+  right: 150%;
+  border:1px solid white;
 }
+
+

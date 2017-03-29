@@ -53,7 +53,7 @@ router.post('/', authHelpers.createSecure, function(req, res){
 });
 // USER DESTROY
 router.delete('/:id', function(req, res){
-  User.findByIdAndRemove(req.params.id)
+  User.findByIdAndRemove(req.params.userId)
   .exec(function(err, user) {
     if (err) console.log(err);
     console.log('User deleted!');
