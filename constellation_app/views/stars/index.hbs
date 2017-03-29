@@ -1,8 +1,8 @@
 <h1>{{user.email}}'s Profile</h1>
 
-<div class="starindex">
 
-  <table>
+
+<!--   <table>
   {{#each stars}}
     <tr>
       <th><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.name}}</a></th>
@@ -10,26 +10,39 @@
       <th>{{#if this.image}} <img src="{{this.image}}" alt = "{{this.name}}"/> {{/if}}<th>
       <th>{{this.best_viewed}}</th>
      </tr>
-    </table>
-      <a href="/users/{{../user.id}}/stars/{{this.id}}/edit">{{this.name}}</a>
-    <div>
-        <form method="POST" action="/users/{{../user.id}}/stars/{{this.id}}?_method=DELETE">
-          <button type="submit" value="DELETE" class="btn btn-danger" />Delete</button>
-        </form>
-    </div>
+     {{/each}}
+    </table> -->
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Best Viewd</th>
+      <th>Delete</th>
+    </tr>
+    {{#each user.star}}
+      <tr>
+        <td class="tdImage"><img class="tableImage" src ="{{this.image}}" alt="{{this.name}}"></td>
+        <td><a href="/users/{{../user.id}}/stars/{{this.id}}">{{this.name}}</a></td>
+        <td class="descrip">{{this.description}}</td>
+        <td>{{this.best_viewed}}</td>
+        <td><form method="POST" action="/users/{{../user.id}}/stars/{{this.id}}?_method=DELETE">
+            <button type="submit" value="DELETE" class="btn btn-danger" />Delete</button>
+          </form><tb>
+      </tr>
+     {{/each}}
+  </table>
+</div>
+</div>
     </li>
-    <br/>
-
-  {{/each}}
 </ul>
+    <div class="starindex">
         <br>
         <a href="/users/{{user.id}}/stars/new">New Constellation</a>
         <br>
         <a href="/users/{{user.id}}/edit">Edit Account</a>
         <br>
         <a href="/users">Main Page</a>
-<div>
-    <!-- <form method="post" action="/star?_method=DELETE">
-    </form> -->
-</div>
-</div>
+    </div>
+
+

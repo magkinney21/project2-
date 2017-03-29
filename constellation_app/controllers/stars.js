@@ -15,7 +15,7 @@ router.get('/', function indexStar(req, res){
       res.render('stars/index.hbs', {
         user: user,
         user_email: user.email,
-        stars: user.star
+        // stars: user.star
       });
     });
 });

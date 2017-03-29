@@ -1,11 +1,14 @@
-
-<div class="usersIndex">
-<ol>
+<h1>Individual Constellation</h1>
+<div class="usersShow">
+<ol class ="showInfo">
   <li>{{star.name}}</li>
   <li>{{star.description}}</li>
-  <li>{{star.image}}</li>
   <li>{{star.best_viewed}}</li>
   <li></li>
 </ol>
-<a href="/users/{{user.id}}/stars/{{star.id}}/edit">Edit</a>
+ <div class="editOneStar">
+      <form action="/users/{{user.id}}/stars/{{star.id}}/edit">
+      <button type="submit" value="edit">Edit</button>
+      </form>
+    </div>
 </div>

@@ -1,18 +1,18 @@
-<h1>Edit {{this.name}} account info</h1>
+<h1>Edit {{user.name}} account info</h1>
 
 <div class="editrow">
-    <form action="/users/{{user.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">
+    <form action="/users/{{user.id}}?_method=PUT" method="POST" class="col-md-6 col-md-offset-3">
         <div class="form-group">
             <label for="name"> Name:</label>
-            <input type="text" name="name" value="{{users.name}}" class="form-control">
+            <input type="text" name="name" value="{{user.name}}" class="form-control">
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" name="email" value="{{users.email}}" class="form-control">
+            <input type="text" name="email" value="{{user.email}}" class="form-control">
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="text" name="password" value="{{users.password}}" class="form-control">
+            <input type="password" name="password" value="{{user.password}}" class="form-control">
         <div>
             <input type="submit" value="Edit/Update Constellation"/>
         </div>

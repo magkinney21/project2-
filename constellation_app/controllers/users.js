@@ -36,12 +36,27 @@ router.get('/:id/edit', function(req, res) {
   });
 });
 
+// USER UPDATE ROUTE
+router.put('/:id', function(req, res){
+  User.findByIdAndUpdate(req.params.id, {
+    name: req.body.name,
+    email: req.body.email,
+    password_digest: res.hashedPassword,
+  }, { new: true })
+  .exec(function(err, user){
+    if (err) { console.log(err); }
+    console.log(user);
+    res.render('users/show.hbs', {
+      user: user
+    });
+  });
+});
+
 //Registration and save info
 router.post('/', authHelpers.createSecure, function(req, res){
   var user = new User({
     email: req.body.email,
     password_digest: res.hashedPassword,
-    // username: req.body.username
   });
 
   user.save(function(err, user){

@@ -1,8 +1,17 @@
-# Boilerplate Project 2
+# Constellation Creation App
 
-This is boilerplate for your Express project, so there are several things you'll need to add, create and change before you're ready to start working on your project.
+Welcome To the Constellation Creation Application
 
-1. You'll need to create your project two repo and clone or create it locally.
+This app is deisgned to allow you to store a collection of your favorite
+constellations.Allowing you to post an image, write a brife discription, and
+to document the best time to view this constellation. You are able to create a
+new constellation, edit it, and delete if you wish.
+
+Tour through the website --- You will start by signing up after you sign up
+you will be redirected to a log-in page. Once you have logged in you are able
+to beganing creating! You will see an option for create new star this will
+direct you to a
+
 
 2. You'll copy the boilerplate code to your project two repo.
 
