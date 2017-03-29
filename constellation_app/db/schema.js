@@ -24,7 +24,6 @@ StarSchema.pre('save', function(next) {
 
 var UserSchema = new Schema({
   name: String,
-  // username:String,
   email: String,
   password_digest: String,
   created_at: Date,

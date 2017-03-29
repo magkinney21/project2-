@@ -92,7 +92,7 @@ li{
     font-size:50px;
     border: 3px solid rgba(255,255,255,0.6);
     width: 400px;
-    height: 400px;
+    height: 200px;
     text-align:center;
   }
 table, td, th {
@@ -126,14 +126,7 @@ td{
     font-size: 25px;
     margin-right: px;
   }
-.starindex{
-/*    margin-top: -4px;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 50%;
-    align-content: center;
-  }
+
 .form-group{
     margin-top: 20px;
   }

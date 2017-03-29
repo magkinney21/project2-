@@ -4,11 +4,12 @@ var User = require('../models/user.js');
 var authHelpers = require('../helpers/auth.js')
 
 router.get('/login', function(req, res) {
-  res.render('users/login.hbs')
+  res.render('users/login.hbs');
 })
 
 router.post('/login', authHelpers.loginUser, function(req, res){
-  res.redirect(`/users/${req.session.currentUser._id}/stars`)
+  console.log('hello');
+  res.redirect(`/users/${req.session.currentUser._id}/stars`);
 });
 
 router.delete('/', function(req, res){
