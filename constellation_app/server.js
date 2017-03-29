@@ -11,9 +11,7 @@ var $ = require('jquery');
 
 
 
-var usersController = require('./controllers/users.js');
-var sessionsController = require('./controllers/sessions.js');
-var starsController = require('./controllers/stars.js');
+
 
 var app = express();
 
@@ -37,6 +35,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+
+
+
+var usersController = require('./controllers/users.js');
+var sessionsController = require('./controllers/sessions.js');
+var starsController = require('./controllers/stars.js');
 
 app.use('/users', usersController);
 app.use('/sessions', sessionsController);

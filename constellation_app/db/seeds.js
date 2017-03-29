@@ -25,7 +25,7 @@ var aquila = new Star({
 
 var aries = new Star({
     name: 'Aries',
-    image:'https://s-media-cache-ak0.pinimage.com/originals/53/f5/54/53f554fd7fbbb2b6fffe252b20e019b2.jpg',
+    image:'https://s-media-cache-ak0.pinimg.com/originals/53/f5/54/53f554fd7fbbb2b6fffe252b20e019b2.jpg',
     description: 'Latin for ram ',
     best_viewed: 'December'
 });
@@ -58,7 +58,7 @@ var gemini = new Star({
 });
 var leo = new Star({
     name: 'Leo',
-    imaaeaege:'http://www.crystalinks.com/leorb.jpg',
+    image:'https://az616578.vo.msecnd.net/files/responsive/cover/main/desktop/2016/03/20/635940904913958869-325312883_leorb.jpg',
     description: 'Latin for lion',
     best_viewed: 'April'
 });
@@ -94,7 +94,7 @@ var taurus = new Star({
 });
 var ursaMajor = new Star({
     name: 'Ursa Major',
-    image:'https://s-media-cache-ak0.piniameg.com/originals/96/54/12/965412fe2671937bfa3e8e495f3d0b83.jpg',
+    image:'http://rascvic.zenfolio.com/img/s/v-3/p1204974884-3.jpg',
     description: 'Latin for large bear',
     best_viewed: 'April'
 });

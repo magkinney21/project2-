@@ -51,14 +51,17 @@ router.post('/', authHelpers.createSecure, function(req, res){
     res.redirect('/sessions/login');
   });
 });
+
 // USER DESTROY
 router.delete('/:id', function(req, res){
-  User.findByIdAndRemove(req.params.userId)
-  .exec(function(err, user) {
-    if (err) console.log(err);
-    console.log('User deleted!');
-    res.redirect('/users')
-  });
+  User.findByIdAndRemove(req.params.id)
+    .exec(function(err, user) {
+      if (err) console.log(err);
+      console.log('User deleted!');
+      res.redirect('/users')
+    });
 });
+
+
 module.exports = router;
 
