@@ -22,6 +22,6 @@ simply click account info and you will be redirected to that page. And Thats
 about it! Enjoy the page go add some constellations.
 
 [User Stories](https://trello.com/b/iBCKh5Pe/wdi-project-two)
-[Wireframe](http://imgur.com/a/wl3QV)
-[ERD](http://imgur.com/a/uT38A)
+[Wireframe](https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Untitled%20Diagram.xml#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fmagkinney21%2Fproject2-%2Fmaster%2FUntitled%2520Diagram.xml)
+
 
