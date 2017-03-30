@@ -2,24 +2,25 @@
 
 Welcome To the Constellation Creation Application
 
-This app is deisgned to allow you to store a collection of your favorite
-constellations.Allowing you to post an image, write a brife discription, and
-to document the best time to view this constellation. You are able to create a
-new constellation, edit it, and delete if you wish.
+This app is designed to allow you to store a collection of your favorite
+constellations. You are able to create a new constellation, edit it, and delete if you wish.
+You can post an image, write a brief discription, and
+add the best time to view this constellation. 
 
-Lets take a tour through the website --- You will start by signing up after
-you sign up you will be redirected to a log-in page. Once you have logged in
+Lets take a tour through the website --- You will start by signing up. After
+you sign up you will be redirected to a log-in page. Once you have logged in, 
 you are able to start creating! You will start out on the main page, where you
 will see 15 Popular constellations. To get to your profile click the profile
 button at the top of the page. If ever you get an error when clicking the
 profile page, this just means your log-in session has expired and you must
-log back in. Once you are on Your profile You will see an option for create
-new star , edit account. Once you have created a star you will have the option
-of delete it which sceen in on your profile page. If you are to click the
+log back in. Once you are on your profile, you will see an option for create a
+new star and edit account. Once you have created a star you will have the option
+of deleting and editing the constellation. If you are to click the
 name of the constellation, you will be redirected to a page with that stars info
-and the an option to edit it. Lets say we want to edit our account info, well
+and the an option to edit it , and to delete click the delete button next to your created constellation.
+Lets say we want to edit our account info, well
 simply click account info and you will be redirected to that page. And Thats
-about it! Enjoy the page go add some constellations.
+about it! Enjoy the page and go add some constellations!
 
 [User Stories](https://trello.com/b/iBCKh5Pe/wdi-project-two)
 
