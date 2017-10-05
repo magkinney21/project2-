@@ -4,6 +4,10 @@ var User = require('../models/user.js');
 var authHelpers = require('../helpers/auth.js')
 var Star = require("../models/star.js");
 
+
+router.get('/splash', function(req, res){
+  res.render('users/splash')
+});
 router.get('/', function(req, res) {
   Star.find({})
   .exec(function(err, stars){
@@ -63,7 +67,7 @@ router.post('/', authHelpers.createSecure, function(req, res){
     if (err) console.log(err);
     console.log(user);
     // console.log(req.sessions.currentUser);
-    res.redirect('/sessions/login');
+    res.redirect('/users');
   });
 });
 
@@ -73,7 +77,7 @@ router.delete('/:id', function(req, res){
     .exec(function(err, user) {
       if (err) console.log(err);
       console.log('User deleted!');
-      res.redirect('/users')
+      res.redirect('/users/splash')
     });
 });
 

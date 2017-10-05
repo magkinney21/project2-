@@ -1,13 +1,17 @@
 
-<h1>Constellations Collections</h1>
-
-<div class="usersIndex">
-<ol class="pictable">
-    {{#each stars}}
-  <div class="thisStar">
-    <li id="starname">{{this.name}}</li>
-   <span id = "image" <li><img src="{{this.image}}"></li> </span>
+<h1 class="indexview">Constellations Collections</h1>
+<div class="main" >
+{{#each stars}}
+<div id="cardrow" class="row.no-gutters">
+    <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+            <h4 class="card-title">{{this.name}}</h4>
+            <img class="card-img-top" src="{{this.image}}" alt="Card image cap" style="height:40vh" />
+            <div class="card-block">
+                <p class="card-text">Click for More</p>
+            </div>
+        </div>
+    </div>
 </div>
-    {{/each}}
-</ol>
+{{/each}}
 </div>

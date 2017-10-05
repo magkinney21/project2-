@@ -1,20 +1,20 @@
 var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/stars_db');
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-}
-else {
-  mongoose.connect('mongodb://localhost/stars_db');
-}
-mongoose.connection.on('error', function(err) {
-  console.error('MongoDB connection error: ' + err);
-  process.exit(-1);
-  }
-);
-mongoose.connection.once('open', function() {
-  console.log("Mongoose has connected to MongoDB!");
-});
-mongoose.promise = global.Promise;
+mongoose.connect('mongodb://localhost/stars_db');
+// if (process.env.MONGODB_URI) {
+//   mongoose.connect(process.env.MONGODB_URI);
+// }
+// else {
+//   mongoose.connect('mongodb://localhost/stars_db');
+// }
+// mongoose.connection.on('error', function(err) {
+//   console.error('MongoDB connection error: ' + err);
+//   process.exit(-1);
+//   }
+// );
+// mongoose.connection.once('open', function() {
+//   console.log("Mongoose has connected to MongoDB!");
+// });
+// mongoose.promise = global.Promise;
 
 var User = require('../models/user');
 var Star = require('../models/star');
@@ -78,7 +78,7 @@ var leo = new Star({
 });
 var lyra = new Star({
     name: 'Lyra',
-    image:'http://scistand.com/wp-content/uploads/sites/3/2013/08/Lyra.png',
+    image:'http://3.bp.blogspot.com/-I6Tvi6f9xXI/Vh7cOE-gCwI/AAAAAAAAnhc/Ir2JTwj2I2k/s320/Lyra.png',
     description: 'Latin for lyre',
     best_viewed: 'August'
 });

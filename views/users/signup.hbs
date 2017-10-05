@@ -1,4 +1,4 @@
-<h1>Create A New Account</h1>
+{{!-- <h1>Create A New Account</h1>
 <div class="signup">
 <form action="/users" method="post">
   <div>
@@ -18,4 +18,58 @@
   <input type="submit" value="Submit">
  <!--  <a href="/users" class="btn btn-default">Main Page</a> -->
 </form>
-</div>
+</div> --}}
+
+ <div class="container">
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="flip">
+        <div class="card"> 
+          <div class="face front"> 
+            <div class="panel panel-default">
+              <form class="form-horizontal" action="/sessions/login" method="post">             
+                <br>
+                <img class="img-thumbnail" src="https://68.media.tumblr.com/dce438d80bd104063575bf01fe012b21/tumblr_ogx1dtFTPa1vlotg4o7_500.gif" alt="" />
+                <br>
+                <br>          
+                <input class="form-control" type="email" placeholder="Email"/>
+                <input class="form-control" type="password" placeholder="Password"/>
+                <p class="text-right"><a href="">Forgot Password</a></p>
+                <button class="btn btn-primary btn-block">LOG IN</button>
+
+                <p class="text-center">
+                  <a href="#" class="fliper-btn">Create new account?</a>
+                </p>
+              </form>
+            </div>
+          </div> 
+          <div class="face back">          
+              <div class="panel panel-default">
+              <form class="form-horizontal" action="/users" method="post">     
+                <br>
+                <img class="img-thumbnail" src="https://68.media.tumblr.com/dce438d80bd104063575bf01fe012b21/tumblr_ogx1dtFTPa1vlotg4o7_500.gif" alt="" />
+                <br>
+              
+                <input class="form-control" placeholder="Name"/>
+                <input class="form-control"  placeholder="Email"/>
+                <input class="form-control" type="password" placeholder="Password"/>
+                <button class="btn btn-primary btn-block" type="submit">SIGN UP</button>
+                <p class="text-center">
+                  <a href="#" class="fliper-btn">Already have an account?</a>
+                </p>
+                
+              </form>
+
+            </div>
+          </div>
+        </div>   
+      </div>
+     </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div><!-- /.container -->
+ <script>$('.fliper-btn').click(function(){
+    $('.flip').find('.card').toggleClass('flipped');
+});</script>

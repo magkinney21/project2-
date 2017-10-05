@@ -3,41 +3,53 @@
   <head>
     <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"  rel="stylesheet">
+
     <meta charset="utf-8">
 
-  <style media = "screen">
-      nav li {
-       display: inline;
-     }
-     a {
-       text-decoration: none;
-     }
-     nav form {
-       display: inline;
-     }
-   </style>
-    <title></title>
+          <style media = "screen">
+            nav li {
+            display: inline;
+            padding-left: 20px;
+          }
+          .a {
+            text-decoration: none;
+            color:white;
+          }
+          nav form {
+            display: inline;
+          }
+          a:hover{
+            color: teal;
+          }
+        </style>
+  <title>Constellation Creation</title>
   </head>
   <body>
-  <header>
-<div class="nav">
-  <nav>
-     <ul>
-       <li><a href="/users/signup">Signup</a> | </li>
-       <li><a href="/sessions/login">Login</a> | </li>
-       <li><a href="/users">Main</a> | </li>
-       <li><a href="/users/{{user._id}}/stars">Profile</a> | </li>
-       <li>
-         <form method="post" action="/sessions?_method=DELETE">
-           <button>logout</button>
-         </form>
-       </li>
-     </ul>
-   </nav>
-</div>
-</header>
+    <header>  
+      <div class="nav">
+        <nav class="navbar">
+          <ul>
+            <li><a class="a" href="/users/splash">Home</a></li>
+            <li><a class="a" href="/users/signup">Sign-In</a></li>
+            <li><a class="a" href="/users">Main</a></li>
+            <li><a class="a" href="/users/{{user._id}}/stars">Profile</a></li>
+            <li>
+            <form method="post" action="/sessions?_method=DELETE">
+             <button class="btn btn-sm align-middle btn-secondary"style="background:white; color:black;" type="submit">logout</button>
+            </form>
+            </li>
+          </ul>
+        </nav>    
+      </div>
+    </header>
 
     {{{body}}}
+    
   </body>
 </html>
 
